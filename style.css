@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family:'Open Sans', sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background: url("https://imgbbb.com/images/2020/02/15/toronto-city.jpg") no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-card {
+  width: 420px;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 10px #00000070;
+}
+
+.top-section {
+  padding: 60px 40px;
+  background: #003366;
+}
+.message, .notif {
+  position: absolute;
+  top: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #66B2FF;
+}
+.message {
+  right: 50px;
+}
+.notif {
+  left: 50px;
+}
+.pic {
+  width: 180px;
+  height: 180px;
+  margin: auto;
+  margin-bottom: 20px;
+  border: 2px solid #001933;
+  border-radius: 50%;
+  padding: 8px;
+  position: relative;
+}
+.pic::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: 1px solid #001933;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  border-radius: 50%;
+  animation: wave 1.5s infinite linear;
+}
+
+@keyframes wave{
+  to{
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+.pic img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.name {
+  color: white;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+.tag {
+  font-size: 18px;
+  color: #A0A0A0;
+}
+
+.bottom-section {
+  padding: 60px 40px;
+  width: 420px;
+  display: flex;
+  background: #A0A0A0;
+  position: relative;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+.bottom-section span{
+  font-size: 14px;
+  display: block;
+}
+.social-media{
+ position: absolute;  
+ width: 100%;
+ top: -30px;
+ left: 40px;
+ z-index: 1;
+}
+.fa-facebook-f{
+ color: #1877f2; 
+}
+.fa-twitter {
+  color: #1da1f2;
+}
+.fa-instagram {
+  color: #c32aa3;
+}
+.fa-youtube {
+  color: #ff0000;
+}
+.social-media i{
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  background: white;
+  border-radius: 50%;
+  font-size: 20px;
+  line-height: 60px !important;
+  margin: 0 10px;  
+  position: relative;
+}
+.social-media i::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #606060;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  border-radius: 50%;
+  z-index: -1;
+  transition: .4s linear;
+}
+.social-media i:hover::after{
+  transform: scale(1.2);
+  opasity: 0;
+}
+.border {
+  width: 1px;
+  height: 20px;
+  background: #bbb;
+  margin: 0 30px;
+}
